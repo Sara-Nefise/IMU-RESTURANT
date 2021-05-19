@@ -1,0 +1,37 @@
+﻿@model Card
+@{
+    ViewData["title"] = Model.Name;
+    Layout = "_layout";
+}
+<div class="m-2">
+    <h6 class="text-white bg-info text-center p-2">Card Information</h6>
+    <table class="table table-sm table-striped table-bordered">
+        <tbody>
+            <tr>
+                <th>ID</th>
+                <th>@Model.Id</th>
+            </tr>
+            <tr>
+                <th>Balance</th>
+                <th>@Model.Balance</th>
+            </tr>
+            <tr>
+                <th>Name</th>
+                <th>@Model.Name</th>
+            </tr>
+            <tr>
+                <th>Surname</th>
+                <th>@Model.Surname</th>
+            </tr>
+            <tr>
+                <th>Phone Number</th>
+                <th>@Model.PhoneNumber</th>
+            </tr>
+            <tr>
+                <th>Positino</th>
+                <th>@Model.Position</th>
+            </tr>
+        </tbody>
+    </table>
+    <a class="btn btn-info" asp-action="Index" asp-controller="Home">Back</a>
+</div>

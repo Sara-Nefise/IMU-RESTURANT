@@ -1,0 +1,19 @@
+﻿@{
+    ViewData["Title"] = "Home";
+}
+
+<div class="text-center">
+    <h1 class="display-4 m-5">Welcome To IMU Resturant</h1>
+    <a asp-controller="Card" asp-action="Create" class="btn btn-primary">
+        Apply for a new card
+    </a>
+    <a asp-controller="Card" asp-action="Charge" class="btn btn-warning">
+        Charge your card
+    </a>
+    <a asp-controller="Statistics" asp-action="Index" class="btn btn-info">
+        Statistics
+    </a>
+    <a asp-controller="Food" asp-action="Menu" class="btn btn-danger">
+        Food Menu
+    </a>
+</div>

@@ -1,0 +1,31 @@
+﻿@{
+    ViewData["title"] = "New Card";
+    Layout = "_layout";
+    Card card = new Card();
+}
+
+<div class="m-1 text-danger" asp-validation-summary="All"></div>
+<form method="post" asp-action="SubmitForm">
+    <div class="m-2">
+        <label asp-for="@card.Name">Name</label>
+        <input asp-for="@card.Name" class="form-control" />
+    </div>
+    <div class="m-2">
+        <label asp-for="@card.Surname">Surname</label>
+        <input asp-for="@card.Surname" class="form-control" />
+    </div>
+    <div class="m-2">
+        <label asp-for="@card.PhoneNumber">Phone Number</label>
+        <input asp-for="@card.PhoneNumber" class="form-control" />
+    </div>
+    <div class="m-2">
+        <label asp-for="@card.Surname">Surname</label>
+        <select>
+            <option value="Student">Student</option>
+            <option value="Academical staff">Academical staff</option>
+            <option value="administrative staff">administrative staff</option>
+        </select>
+    </div>
+    <button class="btn text-white btn-success" type="submit">Submit</button>
+    <a class="btn btn-info" asp-controller="Home" asp-action="Index">Back</a>
+</form>

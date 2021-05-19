@@ -1,0 +1,24 @@
+﻿@{
+    ViewData["title"] = "Charge";
+    Layout = "_layout";
+    string id = "";
+    int balance = 0;
+}
+
+<div class="container p-5 mt-5 w-50">
+    <div class="bg-warning text-center text-white p-2 rounded"><h4>Charge your card</h4><h5>( Fill your belly )</h5></div>
+    <div class="m-1 text-danger" asp-validation-summary="All"></div>
+    <form asp-controller="Card" asp-action="SubmitCharge" method="post">
+        <div class="form-group">
+            <label asp-for="@id">Card Id</label>
+            <input class="form-control" asp-for="@id" />
+        </div>
+        <div class="form-group">
+            <label asp-for="@balance">Balance</label>
+            <input asp-for="@balance" class="form-control" />
+        </div>
+        <button class="btn text-white btn-success" type="submit">Submit</button>
+        <a class="btn btn-info text-white" asp-controller="Home" asp-action="Index">Back</a>
+    </form>
+</div>
+
